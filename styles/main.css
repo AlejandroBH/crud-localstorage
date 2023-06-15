@@ -12031,4 +12031,22 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+@media (max-width: 991.98px) {
+  .register-img {
+    display: none;
+  }
+}
+.img-fluid {
+  height: 100%;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+.card-text {
+  height: 75px;
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */

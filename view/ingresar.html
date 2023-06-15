@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>CRUD LS</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container">
+              <a class="navbar-brand" href="/">CRUD LS</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/">Inicio</a>
+                    <a class="nav-link active disabled" href="view/ingresar.html">Ingresar</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <section>
+        <div class="container mt-5">
+
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <img src="../assets/img/register-img.png" alt="Imagen registro" class="img-fluid rounded register-img">
+                </div>
+                <div class="col-lg-6 border shadow-lg rounded p-3 p-lg-5">
+                <h2 class="mb-4">Ingresar</h2>
+                <!-- <div class="alert alert-success" role="alert">Guardado con exito</div> -->
+                    <form>
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control is-valid" id="floatingInput" placeholder="Nombre">
+                            <label for="floatingInput">Nombre</label>
+                            <div class="form-text valid-feedback" id="basic-addon4">Example help text goes outside the input group.</div>
+                          </div>
+                          <div class="form-floating mb-4">
+                            <input type="text" class="form-control is-invalid" id="floatingInput" placeholder="Imagen">
+                            <label for="floatingInput">Imagen URL</label>
+                            <div class="form-text invalid-feedback" id="basic-addon4">Example help text goes outside the input group.</div>
+                          </div>
+
+                          <div class="form-floating mb-4">
+                            <textarea class="form-control" placeholder="Descripcion" id="floatingTextarea2" style="height: 100px; resize: none;"></textarea>
+                            <label for="floatingTextarea2">Descripcion</label>
+                            <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+                          </div>
+
+                          <div class="d-flex justify-content-start">
+                            <button class="btn btn-primary btn-lg">Guardar</button>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

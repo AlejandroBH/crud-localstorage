@@ -1,1 +1,24 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@include media-breakpoint-down(lg) {
+    .register-img {
+        display: none;
+    }
+}
+
+.img-fluid {
+    height: 100%;
+}
+
+.card {
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+    }
+
+    &-text {
+        height: 75px;
+        overflow: hidden;
+    }
+}
