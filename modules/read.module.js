@@ -9,6 +9,6 @@ const cardsBtnDelete = document.querySelectorAll('[data-btn-delete]');
 
 cardsBtnDelete.forEach((item, id) => {
     item.addEventListener('click', () => {
-        delCard(id,item);
+        delCard(id);
     });
 });

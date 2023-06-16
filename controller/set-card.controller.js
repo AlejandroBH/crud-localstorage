@@ -15,7 +15,7 @@ export const setCard = (name, description, image) => {
 export const createCard = (card) => {
     const cardInfo = getCard(card);
     containerCards.innerHTML += `
-    <div class="card p-0">
+    <div class="card p-0" data-card-item>
         <img src="${cardInfo.image}" class="card-img-top card-img-aspect" alt="${cardInfo.name}">
         <div class="card-body">
             <h5 class="card-title">${cardInfo.name}</h5>
