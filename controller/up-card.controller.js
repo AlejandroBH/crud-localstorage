@@ -10,7 +10,7 @@ export const getDataCard = () => {
     const result = cardArray.find( item => item.identify == idItem );
     const imageAside = document.querySelector('[data-aside-image]');
     imageAside.setAttribute('src', result.image);
-    document.title += ` - Modificar a ${result.name}`;
+    document.title += ` ${result.name}`;
     inputName.value = result.name;
     inputImage.value = result.image;
     inputDescription.value = result.description;
