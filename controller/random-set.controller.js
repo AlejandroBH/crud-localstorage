@@ -2,6 +2,7 @@
 
 import { inputDescription, inputImage, inputName } from "../main.js";
 
+// funcion para generar tarjetas con informacion aleatoria (solo debug)
 export const randomSet = () => {
     const randomName = [
         'Titulo Florencia',
