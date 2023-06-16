@@ -12062,4 +12062,8 @@ textarea.form-control-lg {
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.alert {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
