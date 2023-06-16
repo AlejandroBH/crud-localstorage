@@ -20,7 +20,8 @@ export const createCard = (card) => {
         <div class="card-body">
             <h5 class="card-title">${cardInfo.name}</h5>
             <p class="card-text">${cardInfo.description}</p>
-            <a href="#" class="btn btn-primary disabled">Modificar</a>
+            <a href="#" class="btn btn-primary disabled" data-btn-update>Modificar</a>
+            <button class="btn btn-danger" data-btn-delete>Eliminar</button>
         </div>
     </div>
     `;

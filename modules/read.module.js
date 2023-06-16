@@ -1,8 +1,14 @@
 'use strict';
 
-import { createCard } from "../controller/set-card.controller.js";
-import { cardArray } from "../main.js";
+import { delCard } from "../controller/del-card.controller.js";
+import { insertCards } from "../controller/get-card.controller.js";
 
-for (let card in cardArray){
-    createCard(card);
-}
+insertCards();
+
+const cardsBtnDelete = document.querySelectorAll('[data-btn-delete]');
+
+cardsBtnDelete.forEach((item, id) => {
+    item.addEventListener('click', () => {
+        delCard(id,item);
+    });
+});
