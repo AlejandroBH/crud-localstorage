@@ -20,7 +20,7 @@ export const createCard = (card) => {
         <div class="card-body">
             <h5 class="card-title">${cardInfo.name}</h5>
             <p class="card-text">${cardInfo.description}</p>
-            <a href="#" class="btn btn-primary disabled" data-btn-update>Modificar</a>
+            <a href="/view/modificar.html?id=${cardInfo.identify}" class="btn btn-primary">Modificar</a>
             <button class="btn btn-danger" data-btn-delete>Eliminar</button>
         </div>
     </div>

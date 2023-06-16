@@ -1,6 +1,6 @@
 'use strict';
 
-export const formCreate = document.querySelector('[data-form-create]');
+export const formCreate = document.querySelector('[data-form]');
 export const inputName = document.querySelector('[data-input-name]');
 export const inputImage = document.querySelector('[data-input-image]');
 export const inputDescription = document.querySelector('[data-input-description]');
