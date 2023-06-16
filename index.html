@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="modules/read.module.js" async></script>
     <title>CRUD LS</title>
 </head>
 <body>
@@ -28,19 +29,7 @@
 
     <section>
         <div class="container mt-5">
-
-            <div class="card-container">
-
-                <div class="card p-0">
-                    <img src="assets/img/register-img.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Modificar</a>
-                    </div>
-                </div>
-                
-            </div>
+            <div class="card-container" data-container-cards></div>
         </div>
     </section>
 

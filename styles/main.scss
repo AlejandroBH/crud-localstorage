@@ -1,9 +1,15 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 @include media-breakpoint-down(lg) {
-    .register-img {
+    .register-img-off {
         display: none;
     }
+}
+
+.register-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .img-fluid {
@@ -20,5 +26,10 @@
     &-text {
         height: 75px;
         overflow: hidden;
+    }
+
+    &-img-aspect {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
     }
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/main.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="../modules/create.module.js" async></script>
     <title>CRUD LS</title>
 </head>
 <body>
@@ -31,32 +32,34 @@
 
             <div class="row">
                 <div class="col-lg-6 d-flex align-items-center">
-                    <img src="../assets/img/register-img.png" alt="Imagen registro" class="img-fluid rounded register-img">
+                    <img src="../assets/img/register-img.png" alt="Imagen registro" class="rounded register-img register-img-off">
                 </div>
                 <div class="col-lg-6 border shadow-lg rounded p-3 p-lg-5">
                 <h2 class="mb-4">Ingresar</h2>
-                <!-- <div class="alert alert-success" role="alert">Guardado con exito</div> -->
-                    <form>
+                    <form data-form-create>
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control is-valid" id="floatingInput" placeholder="Nombre">
+                            <input type="text" class="form-control is-valid" id="floatingInput" placeholder="Nombre" data-input-name>
                             <label for="floatingInput">Nombre</label>
-                            <div class="form-text valid-feedback" id="basic-addon4">Example help text goes outside the input group.</div>
+                            <div class="form-text valid-feedback" data-feedback-name>Example help text goes outside the input group.</div>
                           </div>
                           <div class="form-floating mb-4">
-                            <input type="text" class="form-control is-invalid" id="floatingInput" placeholder="Imagen">
+                            <input type="text" class="form-control is-invalid" id="floatingInput" placeholder="Imagen" data-input-image>
                             <label for="floatingInput">Imagen URL</label>
-                            <div class="form-text invalid-feedback" id="basic-addon4">Example help text goes outside the input group.</div>
+                            <div class="form-text invalid-feedback" data-feedback-image>Example help text goes outside the input group.</div>
                           </div>
 
                           <div class="form-floating mb-4">
-                            <textarea class="form-control" placeholder="Descripcion" id="floatingTextarea2" style="height: 100px; resize: none;"></textarea>
+                            <textarea class="form-control" placeholder="Descripcion" id="floatingTextarea2" style="height: 100px; resize: none;" data-input-description></textarea>
                             <label for="floatingTextarea2">Descripcion</label>
-                            <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
+                            <div class="form-text" data-feedback-description>Example help text goes outside the input group.</div>
                           </div>
 
                           <div class="d-flex justify-content-start">
                             <button class="btn btn-primary btn-lg">Guardar</button>
                           </div>
+                          
+                          <div class="alert alert-success mt-4" role="alert" data-submit-alert>Guardado con exito</div>
+
                     </form>
                 </div>
             </div>
