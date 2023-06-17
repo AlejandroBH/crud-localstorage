@@ -12064,6 +12064,10 @@ textarea.form-control-lg {
      object-fit: cover;
 }
 
+.form-container {
+  height: 669px;
+}
+
 .alert {
   display: none;
 }/*# sourceMappingURL=main.css.map */
