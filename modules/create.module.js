@@ -7,24 +7,31 @@ import { setCard } from "../controller/set-card.controller.js";
 import { formCreate, inputDescription, inputImage, inputName } from "../main.js";
 import { regex } from "../model/regex.model.js";
 
-// debug
-randomSet();
-// debug
+let nameValid = false;
+let imageValid = false;
+
+randomSet(); // debug
 
 inputName.addEventListener('keyup', () => {
-    validateInput(inputName, regex.rGname);
+    nameValid = validateInput(inputName, regex.rGname);
 });
 
 inputImage.addEventListener('keyup', () => {
-    validateInput(inputImage, regex.rGImage);
+    imageValid = validateInput(inputImage, regex.rGImage);
 });
 
 formCreate.addEventListener('submit', (e) => {
     e.preventDefault();
-    setCard(inputName.value, inputDescription.value, inputImage.value);
-    createAlert('Ingresado con éxito, espere a ser redirigido.','success');
 
-    // debug
-    randomSet();
-    // debug
+    nameValid = validateInput(inputName, regex.rGname);
+    imageValid = validateInput(inputImage, regex.rGImage);
+
+    if (nameValid && imageValid) {
+        setCard(inputName.value, inputDescription.value, inputImage.value);
+        createAlert('Ingresado con éxito, espere a ser redirigido.', 'success', true);
+    } else {
+        createAlert('Los datos ingresados no son validos.', 'danger', false);
+    }
+
+    randomSet(); // debug
 });

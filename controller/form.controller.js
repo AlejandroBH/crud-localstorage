@@ -6,8 +6,10 @@ export const validateInput = (input, regex) => {
     if (expression.test(input.value)) {
         input.classList.add('is-valid');
         input.classList.remove('is-invalid');
+        return true;
     } else {
         input.classList.add('is-invalid');
         input.classList.remove('is-valid');
+        return false;
     }
 }
