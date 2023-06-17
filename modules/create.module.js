@@ -6,11 +6,12 @@ import { randomSet } from "../controller/random-set.controller.js";
 import { setCard } from "../controller/set-card.controller.js";
 import { formCreate, inputDescription, inputImage, inputName } from "../main.js";
 import { regex } from "../model/regex.model.js";
+const activeRandomSet = false;
 
 let nameValid = false;
 let imageValid = false;
 
-randomSet(); // debug
+randomSet(activeRandomSet);
 
 inputName.addEventListener('keyup', () => {
     nameValid = validateInput(inputName, regex.rGname);
@@ -33,5 +34,5 @@ formCreate.addEventListener('submit', (e) => {
         createAlert('Los datos ingresados no son validos.', 'danger', false);
     }
 
-    randomSet(); // debug
+    randomSet(activeRandomSet);
 });

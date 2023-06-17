@@ -3,7 +3,7 @@
 import { inputDescription, inputImage, inputName } from "../main.js";
 
 // funcion para generar tarjetas con informacion aleatoria (solo debug)
-export const randomSet = () => {
+export const randomSet = (active) => {
     const randomName = [
         'Titulo Florencia',
         'Titulo Luisa',
@@ -13,9 +13,9 @@ export const randomSet = () => {
         'Titulo Tato',
         'Titulo Gerardo',
         'Titulo Marcos',
-        'Titulo Tomás',
-        'Titulo Giménez',
-        'Titulo María',
+        'Titulo Tomas',
+        'Titulo Gimanez',
+        'Titulo Maria',
         'Titulo Victor',
     ];
     
@@ -25,6 +25,9 @@ export const randomSet = () => {
         'https://i.pinimg.com/564x/98/50/21/9850218a384991e329c2fbd8e04ced4e.jpg',
         'https://i.pinimg.com/564x/dd/f0/77/ddf0777a33861660fae05348e70ebb05.jpg',
         'https://i.pinimg.com/564x/72/46/7d/72467d43d6eebcc0655228476cdde8b6.jpg',
+        'https://www.aulafacil.com/uploads/cursos/3089/editor/agriculture-84698_640.es.jpg',
+        'https://is3-ssl.mzstatic.com/image/thumb/Music5/v4/2a/b7/61/2ab7615b-a091-a203-77b4-4bd348ac1efd/885686597088.jpg/600x600bf-60.jpg',
+        'https://cdns-images.dzcdn.net/images/cover/fc68f1082a6ce2f912886bb4b2d2a561/500x500.jpg',
     ];
 
     const randomDescription = [
@@ -35,11 +38,15 @@ export const randomSet = () => {
         'Kishimoto agregó que, debido a que Naruto ocurre en un «mundo imaginario japonés», tuvo que «poner ciertas reglas a través de un modelo sistemático para poder hacer que la historia progresara fácilmente». Además, aseguró que había introducido a la astrología china, ya que esta tiene una larga influencia en Japón; a la misma se deben los sellos de mano zodiacales.',
     ];
 
-    let mrName = Math.floor(Math.random()*randomName.length);
-    let mrImage = Math.floor(Math.random()*randomImage.length);
-    let mrDescription = Math.floor(Math.random()*randomDescription.length);
-
-    inputName.value = randomName[mrName];
-    inputImage.value = randomImage[mrImage];
-    inputDescription.value = randomDescription[mrDescription];
+    if (active) {
+        let mrName = Math.floor(Math.random()*randomName.length);
+        let mrImage = Math.floor(Math.random()*randomImage.length);
+        let mrDescription = Math.floor(Math.random()*randomDescription.length);
+    
+        inputName.value = randomName[mrName];
+        inputImage.value = randomImage[mrImage];
+        inputDescription.value = randomDescription[mrDescription];
+    } else {
+        return false;
+    }
 }
