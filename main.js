@@ -11,3 +11,5 @@ export const submitAlert = document.querySelector('[data-submit-alert]');
 export const submitBtn = document.querySelector('[data-submit-btn]');
 export const cardArray = JSON.parse(localStorage.getItem('cards')) || [];
 export const containerCards = document.querySelector('[data-container-cards]');
+export const homeOn = document.querySelector('[data-home-on]');
+export const homeOff = document.querySelector('[data-home-off]');

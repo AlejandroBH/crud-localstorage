@@ -12054,6 +12054,9 @@ textarea.form-control-lg {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 25px;
 }
+.card-container .card {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
 .card-text {
   height: 75px;
   overflow: hidden;
@@ -12070,4 +12073,8 @@ textarea.form-control-lg {
 
 .alert {
   display: none;
+}
+
+.empty-page {
+  height: 80vh;
 }/*# sourceMappingURL=main.css.map */
